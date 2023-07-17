@@ -1,0 +1,623 @@
+   <div id="estilos-aprendizaje-cuestionario">
+  <h2>¡Comencemos!</h2>
+    <div id="condiciones">
+    <p>Tómate un tiempo tranquilo y sin distracciones para realizar el test. Lee cada pregunta atentamente y selecciona la opción (marcando "si") que mejor refleje tus preferencias personales o la forma en que te sientes más cómodo/a al abordar una situación de aprendizaje.  </p>
+    <p>No te preocupes si encuentras algunas preguntas similares o relacionadas. El test se diseñó de esta manera para evaluar diferentes aspectos de tu estilo de aprendizaje. Continúa respondiendo todas las preguntas hasta llegar a la número 80.</p>
+     <p>Una vez que hayas respondido todas las preguntas, nuestro sistema analizará tus respuestas y generará un gráfico que te revelará tus estilos de aprendizaje dominantes.</p>
+     <p>Si estás listo para iniciar, coloca un check en la casilla de abajo y haz click en continuar.</p>
+    <label>
+      <input type="checkbox" id="aceptar-condiciones"> Estoy listo para iniciar el test
+    </label> </br></br>
+    <button onclick="mostrarPreguntas()">Continuar</button>
+  </div>
+  <div id="formulario-preguntas" style="display: none;">
+   <form onsubmit="consolidarRespuestas(event)">
+ 
+       <h3>Nombre:</h3>
+      <input type="text" name="nombre" required>
+      <h3>Organización:</h3>
+      <input type="text" name="organizacion" required>
+
+ 
+    <h3>Pregunta 1:</h3>
+    <p> Digo lo que pienso claramente y sin rodeos. </p>
+    <label>
+      <input type="checkbox" name="pregunta1" value="PRAGMATICO"> Sí
+    </label>
+
+    <h3>Pregunta 2:</h3>
+    <p> Con certeza me doy cuenta de lo que está bien y lo que está mal. </p>
+    <label>
+      <input type="checkbox" name="pregunta2" value="TEORICO"> Sí
+        </label>
+
+    <h3>Pregunta 3:</h3>
+    <p> Muchas veces actúo sin mirar las consecuencias. </p>
+    <label>
+      <input type="checkbox" name="pregunta3" value="ACTIVO"> Sí
+    </label>
+
+    <h3>Pregunta 4:</h3>
+    <p> Normalmente trato de resolver los problemas metódicamente y paso a paso. </p>
+    <label>
+      <input type="checkbox" name="pregunta4" value="TEORICO"> Sí
+    </label>
+
+ <h3>Pregunta 5:</h3>
+    <p> Creo que los formalismos limitan la actuación libre de las personas. </p>
+    <label>
+      <input type="checkbox" name="pregunta5" value="ACTIVO"> Sí
+    </label>
+
+    <h3>Pregunta 6:</h3>
+    <p> Me interesa saber cuáles son los sistemas de valores de los demás y con qué criterios actúan. </p>
+    <label>
+      <input type="checkbox" name="pregunta6" value="TEORICO"> Sí
+    </label>
+
+    <h3>Pregunta 7:</h3>
+    <p> Pienso que actuar intuitivamente puede ser siempre tan válido como actuar reflexivamente. </p>
+    <label>
+      <input type="checkbox" name="pregunta7" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 8:</h3>
+    <p> Creo que lo más importante es que las cosas funcionen. </p>
+    <label>
+      <input type="checkbox" name="pregunta8" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 9:</h3>
+    <p> Procuro estar al tanto de lo que ocurre aquí y ahora. </p>
+    <label>
+      <input type="checkbox" name="pregunta9" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 10:</h3>
+    <p> Disfruto cuando tengo tiempo para preparar mi trabajo y realizarlo a conciencia. </p>
+    <label>
+      <input type="checkbox" name="pregunta10" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 11:</h3>
+    <p> Estoy a gusto siguiendo un orden, en las comidas, en el estudio, haciendo ejercicio, etc. </p>
+    <label>
+      <input type="checkbox" name="pregunta11" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 12:</h3>
+    <p> Cuando escucho una nueva idea en seguida comienzo a pensar cómo ponerla en práctica rápidamente. </p>
+    <label>
+      <input type="checkbox" name="pregunta12" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 13:</h3>
+    <p> Prefiero las ideas originales y novedosas, aunque no sean prácticas. </p>
+    <label>
+      <input type="checkbox" name="pregunta13" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 14:</h3>
+    <p> Acepto y me ajusto a las normas sólo si me sirven para lograr mis objetivos. </p>
+    <label>
+      <input type="checkbox" name="pregunta14" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 15:</h3>
+    <p> Normalmente encajo bien con personas reflexivas, analíticas y me cuesta sintonizar con personas demasiado espontáneas, imprevisibles. </p>
+    <label>
+      <input type="checkbox" name="pregunta15" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 16:</h3>
+    <p> Escucho con más frecuencia que hablo. </p>
+    <label>
+      <input type="checkbox" name="pregunta16" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 17:</h3>
+    <p> Prefiero las cosas estructuradas a las desordenadas. </p>
+    <label>
+      <input type="checkbox" name="pregunta17" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 18:</h3>
+    <p> Cuando poseo cualquier información, trato de interpretarla bien antes de manifestar alguna conclusión. </p>
+    <label>
+      <input type="checkbox" name="pregunta18" value="REFLEXIVO"> Sí
+    </label>
+
+
+
+
+
+<h3>Pregunta 19:</h3>
+    <p> Antes de tomar una decisión estudio con cuidado sus ventajas e inconvenientes. </p>
+    <label>
+      <input type="checkbox" name="pregunta19" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 20:</h3>
+    <p> Me entusiasma el reto de hacer algo nuevo y diferente. </p>
+    <label>
+      <input type="checkbox" name="pregunta20" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 21:</h3>
+    <p> Soy coherente con mis criterios y valores. Tengo principios y los sigo. </p>
+    <label>
+      <input type="checkbox" name="pregunta21" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 22:</h3>
+    <p> Cuando hay una discusión no me gusta ir con rodeos. </p>
+    <label>
+      <input type="checkbox" name="pregunta22" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 23:</h3>
+    <p> Me disgusta implicarme afectivamente en mi ambiente de trabajo. Prefiero mantener relaciones distantes. </p>
+    <label>
+      <input type="checkbox" name="pregunta23" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 24:</h3>
+    <p> Me gustan más las personas realistas y concretas que las teóricas. </p>
+    <label>
+      <input type="checkbox" name="pregunta24" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 25:</h3>
+    <p> Me cuesta ser creativo y romper estructuras. </p>
+    <label>
+      <input type="checkbox" name="pregunta25" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 26:</h3>
+    <p> Me siento a gusto con personas espontáneas y divertidas. </p>
+    <label>
+      <input type="checkbox" name="pregunta26" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 27:</h3>
+    <p> Expreso abiertamente cómo me siento. </p>
+    <label>
+      <input type="checkbox" name="pregunta27" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 28:</h3>
+    <p> Me gusta analizar las cosas detalladamente. </p>
+    <label>
+      <input type="checkbox" name="pregunta28" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 29:</h3>
+    <p> Me molesta que la gente no se tome en serio las cosas. </p>
+    <label>
+      <input type="checkbox" name="pregunta29" value="TEORICO"> Sí
+    </label>
+
+
+<h3>Pregunta 30:</h3>
+    <p> Me atrae experimentar y practicar las últimas técnicas y novedades. </p>
+    <label>
+      <input type="checkbox" name="pregunta30" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 31:</h3>
+    <p> Soy cauteloso a la hora de sacar conclusiones. </p>
+    <label>
+      <input type="checkbox" name="pregunta31" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 32:</h3>
+    <p> Prefiero contar con el mayor número de fuentes de información. Cuantos más datos reúna para reflexionar, mejor. </p>
+    <label>
+      <input type="checkbox" name="pregunta32" value="REFLEXIVO"> Sí
+    </label>
+
+
+<h3>Pregunta 33:</h3>
+    <p> Tiendo a ser perfeccionista. </p>
+    <label>
+      <input type="checkbox" name="pregunta33" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 34:</h3>
+    <p> Prefiero oír las opiniones de los demás antes de exponer la mía. </p>
+    <label>
+      <input type="checkbox" name="pregunta34" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 35:</h3>
+    <p> Me gusta afrontar la vida espontáneamente y no tener que planificar todo previamente. </p>
+    <label>
+      <input type="checkbox" name="pregunta35" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 36:</h3>
+    <p> En las discusiones me gusta observar cómo actúan los demás participantes. </p>
+    <label>
+      <input type="checkbox" name="pregunta36" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 37:</h3>
+    <p> Me siento incómodo con las personas calladas y demasiado analíticas. </p>
+    <label>
+      <input type="checkbox" name="pregunta37" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 38:</h3>
+    <p> Juzgo con frecuencia las ideas de los demás por su valor práctico. </p>
+    <label>
+      <input type="checkbox" name="pregunta38" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 39:</h3>
+    <p> Me agobio si me obligan a acelerar mucho el trabajo para cumplir un plazo. </p>
+    <label>
+      <input type="checkbox" name="pregunta39" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 40:</h3>
+    <p> En las reuniones apoyo las ideas prácticas y realistas. </p>
+    <label>
+      <input type="checkbox" name="pregunta40" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 41:</h3>
+    <p> Es mejor gozar del momento presente que deleitarse pensando en el pasado o en el futuro. </p>
+    <label>
+      <input type="checkbox" name="pregunta41" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 42:</h3>
+    <p> Me molestan las personas que siempre desean apresurar las cosas. </p>
+    <label>
+      <input type="checkbox" name="pregunta42" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 43:</h3>
+    <p> Aporto ideas nuevas y espontáneas en los grupos de discusión. </p>
+    <label>
+      <input type="checkbox" name="pregunta43" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 44:</h3>
+    <p> Considero que son más consistentes las decisiones fundamentadas en un minucioso análisis que las basadas en la intuición. </p>
+    <label>
+      <input type="checkbox" name="pregunta44" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 45:</h3>
+    <p> Detecto frecuentemente la inconsistencia y puntos débiles en las argumentaciones de los demás. </p>
+    <label>
+      <input type="checkbox" name="pregunta45" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 46:</h3>
+    <p> Creo que es preciso saltarse las normas muchas más veces que cumplirlas. </p>
+    <label>
+      <input type="checkbox" name="pregunta46" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 47:</h3>
+    <p> A menudo me doy cuenta de que existen formas más prácticas y mejores de hacer las cosas. </p>
+    <label>
+      <input type="checkbox" name="pregunta47" value="PRAGMATICO"> Sí
+    </label>
+<h3>Pregunta 48:</h3>
+    <p> Hablo más de lo que escucho. </p>
+    <label>
+      <input type="checkbox" name="pregunta48" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 49:</h3>
+    <p> Prefiero distanciarme de los hechos y observarlos desde otras perspectivas. </p>
+    <label>
+      <input type="checkbox" name="pregunta49" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 50:</h3>
+    <p> Estoy convencido que debe imponerse la lógica y el razonamiento. </p>
+    <label>
+      <input type="checkbox" name="pregunta50" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 51:</h3>
+    <p> Me gusta buscar nuevas experiencias. </p>
+    <label>
+      <input type="checkbox" name="pregunta51" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 52:</h3>
+    <p> Me gusta experimentar y aplicar las cosas. </p>
+    <label>
+      <input type="checkbox" name="pregunta52" value="PRAGMATICO"> Sí
+    </label>
+
+
+<h3>Pregunta 53:</h3>
+    <p> Considero que es bueno llegar rápidamente al grano de cada tema. </p>
+    <label>
+      <input type="checkbox" name="pregunta53" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 54:</h3>
+    <p> Siempre trato de conseguir conclusiones e ideas claras. </p>
+    <label>
+      <input type="checkbox" name="pregunta54" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 55:</h3>
+    <p> Prefiero discutir cuestiones concretas y no perder el tiempo con charlas vacías. </p>
+    <label>
+      <input type="checkbox" name="pregunta55" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 56:</h3>
+    <p> Me impaciento con las argumentaciones irrelevantes e incoherentes en las reuniones. </p>
+    <label>
+      <input type="checkbox" name="pregunta56" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 57:</h3>
+    <p> Compruebo antes si las cosas funcionan realmente. </p>
+    <label>
+      <input type="checkbox" name="pregunta57" value="PRAGMATICO"> Sí
+    </label>
+<h3>Pregunta 58:</h3>
+    <p> Hago varios borradores antes de la redacción definitiva de un trabajo. </p>
+    <label>
+      <input type="checkbox" name="pregunta58" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 59:</h3>
+    <p> Soy consciente de que en las discusiones ayudo a los demás a mantenerse centrados en el tema, evitando divagaciones. </p>
+    <label>
+      <input type="checkbox" name="pregunta59" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 60:</h3>
+    <p> Observo que, con frecuencia, soy uno de los más concentrados en las reuniones. </p>
+    <label>
+      <input type="checkbox" name="pregunta60" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 61:</h3>
+    <p> Cuando algo va mal, le resto importancia y trato de hacerlo mejor. </p>
+    <label>
+      <input type="checkbox" name="pregunta61" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 62:</h3>
+    <p> Rechazo ideas originales y espontáneas si no las veo prácticas. </p>
+    <label>
+      <input type="checkbox" name="pregunta62" value="PRAGMATICO"> Sí
+    </label>
+<h3>Pregunta 63:</h3>
+    <p> Me gusta analizar diversas alternativas antes de tomar una decisión. </p>
+    <label>
+      <input type="checkbox" name="pregunta63" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 64:</h3>
+    <p> Con frecuencia miro hacia adelante para prever el futuro. </p>
+    <label>
+      <input type="checkbox" name="pregunta64" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 65:</h3>
+    <p> En los debates prefiero desempeñar un papel secundario y no participar activamente. </p>
+    <label>
+      <input type="checkbox" name="pregunta65" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 66:</h3>
+    <p> Me molestan las personas que no siguen un enfoque lógico. </p>
+    <label>
+      <input type="checkbox" name="pregunta66" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 67:</h3>
+    <p> Me resulta incómodo tener que planificar y prever las cosas. </p>
+    <label>
+      <input type="checkbox" name="pregunta67" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 68:</h3>
+    <p> Creo que el fin justifica los medios en muchos casos. </p>
+    <label>
+      <input type="checkbox" name="pregunta68" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 69:</h3>
+    <p> Suelo reflexionar sobre los asuntos y problemas. </p>
+    <label>
+      <input type="checkbox" name="pregunta69" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 70:</h3>
+    <p> El trabajar a conciencia me llena de satisfacción y orgullo. </p>
+    <label>
+      <input type="checkbox" name="pregunta70" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 71:</h3>
+    <p> Trato de descubrir los principios y teorías detrás de cada problema. </p>
+    <label>
+      <input type="checkbox" name="pregunta71" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 72:</h3>
+    <p> Con tal de conseguir el objetivo que pretendo soy capaz de saltarme las reglas. </p>
+    <label>
+      <input type="checkbox" name="pregunta72" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 73:</h3>
+    <p> No me importa hacer todo lo necesario para que sea efectivo mi trabajo. </p>
+    <label>
+      <input type="checkbox" name="pregunta73" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 74:</h3>
+    <p> Con frecuencia soy una de las personas que más anima las fiestas. </p>
+    <label>
+      <input type="checkbox" name="pregunta74" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 75:</h3>
+    <p> Me aburro enseguida con el trabajo metódico y minucioso. </p>
+    <label>
+      <input type="checkbox" name="pregunta75" value="ACTIVO"> Sí
+    </label>
+
+<h3>Pregunta 76:</h3>
+    <p> La gente con frecuencia cree que soy poco sensible a sus sentimientos. </p>
+    <label>
+      <input type="checkbox" name="pregunta76" value="PRAGMATICO"> Sí
+    </label>
+
+<h3>Pregunta 77:</h3>
+    <p> Suelo dejarme llevar por mis intuiciones. </p>
+    <label>
+      <input type="radio" name="pregunta77" value="ACTIVO"> Sí
+    </label>
+
+
+<h3>Pregunta 78:</h3>
+    <p> Si trabajo en grupo procuro que se siga un método y un orden. </p>
+    <label>
+      <input type="checkbox" name="pregunta78" value="TEORICO"> Sí
+    </label>
+
+<h3>Pregunta 79:</h3>
+    <p> Me interesa averiguar lo que piensa la gente. </p>
+    <label>
+      <input type="checkbox" name="pregunta79" value="REFLEXIVO"> Sí
+    </label>
+
+<h3>Pregunta 80:</h3>
+    <p> Esquivo los temas subjetivos, ambiguos y poco claros. </p>
+    <label>
+      <input type="checkbox" name="pregunta80" value="TEORICO"> Sí
+    </label>
+     <div id="boton-enviar">
+          <button type="submit">Enviar respuestas</button>
+        </div>
+               </form>
+           </div>
+           
+   
+    <div id="chart-container" style="width: 600px; height: 400px;"></div>
+  </div>
+
+    
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(dibujarGrafico);
+   
+   function mostrarPreguntas() {
+      var aceptarCondiciones = document.getElementById('aceptar-condiciones').checked;
+      if (aceptarCondiciones) {
+        document.getElementById('condiciones').style.display = 'none';
+        document.getElementById('formulario-preguntas').style.display = 'block';
+      } else {
+        alert('Debes marcar la casilla "Estoy listo para iniciar el test" para poder continuar.');
+      }
+    }
+    
+ function consolidarRespuestas(event) {
+  event.preventDefault();
+  var nombre = document.getElementsByName('nombre')[0].value;
+  var organizacion = document.getElementsByName('organizacion')[0].value;
+  var respuestasFormulario = new FormData(event.target);
+  var respuestas = Array.from(respuestasFormulario.values());
+
+   var contadorEstilos = {
+      ACTIVO: 0,
+      REFLEXIVO: 0,
+      TEORICO: 0,
+      PRAGMATICO: 0
+    };
+    
+ respuestas.forEach(function (respuesta) {
+        contadorEstilos[respuesta]++;
+      });
+      
+  dibujarGrafico(contadorEstilos);
+  enviarRespuestasAFirebase(nombre, organizacion, respuestas, contadorEstilos);
+}
+function enviarRespuestasAFirebase(nombre, organizacion, respuestas,contadorEstilos) {
+  // Obtener una referencia a la base de datos de Firebase
+     var database = firebase.database(); 
+  database.ref().push({
+    nombre: nombre,
+    organizacion: organizacion,
+    contadorEstilos: contadorEstilos
+ })
+  .then(function() {
+    console.log("Datos enviados correctamente a Firebase Realtime Database");
+  })
+  .catch(function(error) {
+    console.error("Error al enviar los datos a Firebase Realtime Database:", error);
+  });
+}
+ 
+function dibujarGrafico(contadorEstilos) {
+      var data = google.visualization.arrayToDataTable([
+        ['Estilo', 'Cantidad'],
+        ['Activo', contadorEstilos.ACTIVO],
+        ['Reflexivo', contadorEstilos.REFLEXIVO],
+        ['Teórico', contadorEstilos.TEORICO],
+        ['Pragmático', contadorEstilos.PRAGMATICO]
+      ]);
+
+  var options = {
+        title: 'Estilos de Aprendizaje',
+        is3D: true
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('chart-container'));
+      chart.draw(data, options);
+} 
+
+</script>
+
+  
+<style>
+  /* Estilos para las preguntas y el texto de las opciones de respuesta */
+  #estilos-aprendizaje-cuestionario h3,
+  #estilos-aprendizaje-cuestionario p,
+  #estilos-aprendizaje-cuestionario label {
+    color: #ffffff; /* Cambia el color de texto a blanco */
+  }
+  
+  /* Estilos para el texto de las opciones seleccionadas */
+  #estilos-aprendizaje-cuestionario input[type="radio"]:checked + label {
+    color: #ffffff; /* Cambia el color de texto a blanco */
+  }
+  
+   #boton-enviar {
+      margin-top: 20px; /* Agrega un margen superior de 20px */
+    }
+  
+   @media (max-width: 480px) {
+  /* Ajusta el tamaño del texto para dispositivos móviles */
+  #estilos-aprendizaje-cuestionario h3,
+  #estilos-aprendizaje-cuestionario p,
+  #estilos-aprendizaje-cuestionario label {
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+  }
+
+  /* Ajusta el ancho máximo del contenedor del gráfico */
+  #chart-container {
+    max-width: 100%; /* El contenedor se ajustará al ancho de la pantalla */
+    overflow-x: scroll; /* Permite desplazamiento horizontal si es necesario */
+  }
+}
+  
+</style>
+
